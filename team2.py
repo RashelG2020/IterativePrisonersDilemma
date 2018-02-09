@@ -24,9 +24,14 @@ def move(my_history, their_history, my_score, their_score):
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
     
-    if len(my_history)==1:
+    if len(my_history)<=3:
         return 'b'
     else:
+        if their_history in range(4,6) and len(my_history) > 3:
+            return 'c'
+        else:
+            return 'b'
+        
         
 
     
